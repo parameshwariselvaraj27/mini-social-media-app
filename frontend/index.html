@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Social Media App 🚀</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ================= AUTH SECTION ================= -->
+    <div id="authSection" class="card auth-card">
+      <h2>Welcome Back 👋</h2>
+
+      <input 
+        type="text" 
+        id="username" 
+        placeholder="Username (for register only)" 
+      />
+
+      <input 
+        type="email" 
+        id="email" 
+        placeholder="Email" 
+        required 
+      />
+
+      <input 
+        type="password" 
+        id="password" 
+        placeholder="Password" 
+        required 
+      />
+
+      <div class="btn-group">
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <!-- ================= MAIN APP SECTION ================= -->
+    <div id="appSection" style="display:none;">
+
+      <!-- Top Navigation -->
+      <div class="topbar">
+        <h2>Mini Social Media App 🚀</h2>
+        <button class="logout" onclick="logout()">Logout</button>
+      </div>
+
+      <!-- Create Post -->
+      <div class="card create-post">
+        <textarea 
+          id="postContent" 
+          placeholder="What's on your mind?"
+          rows="3"
+        ></textarea>
+
+        <button onclick="createPost()">Post</button>
+      </div>
+
+      <!-- Posts Feed -->
+      <div id="posts" class="posts-container"></div>
+
+    </div>
+
+  </div>
+
+  <!-- IMPORTANT: Script must be at bottom -->
+  <script src="script.js"></script>
+
+</body>
+</html>
